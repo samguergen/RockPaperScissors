@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  width:100%;
+  display: flex;
+  background: beige;
+}
+
+.main-container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+form {
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.choice-btn {
+  font-size: 22px;
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+  background: brown;
+  padding: 5px;
+  margin:10px;
+}
+
+.submit-btn {
+  width: 50px;
+  height: 30px;
+  font-size: 30px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body ng-app="myApp" ng-controller="MainCtrl">
+
+    <div id="main-container">
+
+      <h1>Rock Paper Scissors!</h1>
+      <div class="intro-phrase">Your move.</div>
+
+      <form id="game-form" ng-submit="playGame()">
+        <input type="text" ng-model="choice.rock" class="choice-btn rock-btn" required>
+
+        <input type="text" ng-model="choice.paper" class="choice-btn paper-btn" required>
+
+        <input type="text" ng-model="choice.scissors" class="choice-btn scissors-btn" required>
+        <br>
+        <!-- TODO: disable until select btn-->
+        <inputs type="submit" class="btn-success submit-btn" value="Go, Paper, Scissors, Go!">
+      </form>
+
+      <br/>
+
+    </div>
+
+    <script src="ngApp.js"></script>
+    <script src="../routes/index.js"></script>
+  </body>
+</html>
