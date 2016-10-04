@@ -13,20 +13,29 @@
       <div class="intro-phrase">Your move.</div>
 
       <form id="game-form" ng-submit="playGame()">
-        <input type="text" ng-model="choice.rock" class="choice-btn rock-btn" required>
-
-        <input type="text" ng-model="choice.paper" class="choice-btn paper-btn" required>
-
-        <input type="text" ng-model="choice.scissors" class="choice-btn scissors-btn" required>
-        <br>
-        <!-- TODO: disable until select btn-->
-        <inputs type="submit" class="btn-success submit-btn" value="Go, Paper, Scissors, Go!">
+        <input type="button" value="Rock" ng-model="choice" class="choice-btn rock-btn" required>
+        <input type="button" value="Paper" ng-model="choice" class="choice-btn paper-btn" required>
+        <input type="button" value="Scissors" ng-model="choice" class="choice-btn scissors-btn" required>
+        <br><!-- TODO: disable until select btn-->
+        <input type="button" class="btn-success" ng-click="" value="Go, Paper, Scissors, Go!">
       </form>
+
+<!--TODO: select icon to appear after choice? -->
+      {{ choice }}
+
+      <div class="results" ng-show="results == true">
+        Your Choice: {{ }} <br>
+        Computer Choice: {{ }} <br>
+
+        Winner: {{ }}
+      </div>
 
       <br/>
 
     </div>
 
+    <!-- links to angular, angular ap and index.js -->
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="ngApp.js"></script>
     <script src="../routes/index.js"></script>
   </body>
