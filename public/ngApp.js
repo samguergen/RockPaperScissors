@@ -1,11 +1,20 @@
 angular.module('myApp', [])
     .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
       console.log('inside mainctrl');
+      $scope.userChoice = {choice: '-'};
 
-      $scope.playGame = function(userChoice){
+      $scope.playGame = function(userSelection){
         console.log('inside playgame func');
-        var postParam = { 'choice': userChoice };
-        var promise = $http.post('/match', postParam);
+        console.log('userSelection is ', userSelection, $scope.userChoice.choice);
+        var postParam = { choice: "" };
+        postParam.choice = $scope.userChoice.choice;
+        console.log("post param is ", postParam);
+        var config = {
+              headers : {
+                  'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+              }
+          };
+        var promise = $http.post('/match', postParam, config);
 
         promise.then( function(response) {
           $scope.data = response;

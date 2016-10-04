@@ -12,14 +12,16 @@
       <h1>Rock Paper Scissors!</h1>
       <div class="intro-phrase">Your move.</div>
 
-        <input type="button" value="Rock" ng-model="choice" class="choice-btn rock-btn" required>
-        <input type="button" value="Paper" ng-model="choice" class="choice-btn paper-btn" required>
-        <input type="button" value="Scissors" ng-model="choice" class="choice-btn scissors-btn" required>
+      <form>
+        <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn" required>Rock
+        <input type="radio" value="paper" ng-model="userChoice.choice" class="choice-btn paper-btn" required>Paper
+        <input type="radio" value="scissors" ng-model="userChoice.choice" class="choice-btn scissors-btn" required>Scissors
         <br><!-- TODO: disable until select btn-->
-        <input type="button" class="btn-success" ng-click="playGame()" value="Go, Paper, Scissors, Go!">
+        <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" value="Go, Paper, Scissors, Go!">
+      </form>
 
 <!--TODO: select icon to appear after choice? -->
-      {{ choice }}
+    your choice is  {{ userChoice.choice }}
 
       <div class="results" ng-show="results == true">
 
