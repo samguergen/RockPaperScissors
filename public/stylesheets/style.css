@@ -12,8 +12,10 @@ html, body {
   border-radius: 5px;
 }
 
-.main-container h2 {
-  order: 1;
+.intro-phrase {
+  text-align: center;
+  margin-left: 70%;
+  width: 400px;
 }
 
 form {
@@ -48,6 +50,7 @@ form {
 
 .data {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .choice-btn {
@@ -55,7 +58,6 @@ form {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background: brown;
   padding: 5px;
   margin:10px;
 }
@@ -65,7 +67,6 @@ form {
   height: 30px;
   font-size: 30px;
 }
-
 
 .form-list {
     list-style-type:none;
@@ -99,7 +100,7 @@ form {
 }
 
 .form-list input[type="radio"]:checked + label {
-    background:yellow;
+    background: purple;
 }
 
 .form-list label {

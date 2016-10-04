@@ -9,13 +9,14 @@
 
     <div id="main-container">
 
-      <h1>Rock Paper Scissors!</h1>
-      <div class="intro-phrase">Your move.</div>
+      <div class="intro-phrase">
+        <h1>Rock Paper Scissors!</h1>
+        Your move.
+      </div>
 
-      <form>
+      <form name="choiceForm">
 
-<div class="results" ng-show="results == true">
-
+        <div class="results" ng-show="results == true">
           Your Choice: <span class="data">{{ data.playerChoice }}</span> <br>
           Computer Choice: <span class="data">{{ data.computerChoice }}</span> <br>
           Winner: <span class="data">{{ data.result }}</span>
@@ -23,11 +24,11 @@
 
         <ul class="form-list">
           <li>
-              <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn">
+              <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn" required>
               <label for="">Rock</label>
           </li>
           <li>
-              <input type="radio" value="paper" ng-model="userChoice.choice" class="choice-btn paper-btn">
+              <input type="radio" value="paper" ng-model="userChoice.choice" class="choice-btn paper-btn" required>
               <label for="">Paper</label>
           </li>
           <li>
@@ -36,13 +37,12 @@
           </li>
         </ul>
         <div class="validate">
-            <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" value="Go, Paper, Scissors, Go!"><br>
+            <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" ng-disabled="choiceForm.$invalid" value="Go, Paper, Scissors, Go!"><br>
           You chose: {{userChoice.choice }}
         </div>
+
       </form>
 
-
-<!-- TODO: disable until select btn-->
 
     <!-- links to angular, angular ap and index.js -->
     <script src="bower_components/angular/angular.min.js"></script>
