@@ -12,18 +12,19 @@
       <h1>Rock Paper Scissors!</h1>
       <div class="intro-phrase">Your move.</div>
 
-      <form id="game-form" ng-submit="playGame()">
         <input type="button" value="Rock" ng-model="choice" class="choice-btn rock-btn" required>
         <input type="button" value="Paper" ng-model="choice" class="choice-btn paper-btn" required>
         <input type="button" value="Scissors" ng-model="choice" class="choice-btn scissors-btn" required>
         <br><!-- TODO: disable until select btn-->
-        <input type="button" class="btn-success" ng-click="" value="Go, Paper, Scissors, Go!">
-      </form>
+        <input type="button" class="btn-success" ng-click="playGame()" value="Go, Paper, Scissors, Go!">
 
 <!--TODO: select icon to appear after choice? -->
       {{ choice }}
 
       <div class="results" ng-show="results == true">
+
+        data: {{data }} <br>
+
         Your Choice: {{ }} <br>
         Computer Choice: {{ }} <br>
 
