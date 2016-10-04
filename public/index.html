@@ -20,17 +20,13 @@
         <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" value="Go, Paper, Scissors, Go!">
       </form>
 
-<!--TODO: select icon to appear after choice? -->
-    your choice is  {{ userChoice.choice }}
-
       <div class="results" ng-show="results == true">
 
-        data: {{data }} <br>
 
-        Your Choice: {{ }} <br>
-        Computer Choice: {{ }} <br>
+        Your Choice: {{ data.playerChoice }} <br>
+        Computer Choice: {{ data.computerChoice }} <br>
 
-        Winner: {{ }}
+        Winner: {{ data.result }}
       </div>
 
       <br/>
