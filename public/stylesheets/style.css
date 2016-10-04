@@ -13,14 +13,40 @@ html, body {
   border-radius: 5px;
 }
 
+.main-container h2 {
+  order: 1;
+}
+
 form {
+  order: 2;
   height: 300px;
   margin-right: auto;
-  margin-left: auto;
-  width: 90%;
+  margin-left: 60%;
+  width: 500px;
   border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.results {
+  order: 1;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.validate {
+  text-align:center;
+  order: 3;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.data {
+  font-weight: bold;
 }
 
 .choice-btn {
@@ -37,4 +63,51 @@ form {
   width: 50px;
   height: 30px;
   font-size: 30px;
+}
+
+
+.form-list {
+    list-style-type:none;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:0;
+    order: 2;
+}
+
+.form-list li {
+     float:left;
+     margin:0 5px 0 0;
+    width:100px;
+    height:40px;
+    position:relative;
+}
+
+.form-list label, .form-list input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.form-list input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.form-list input[type="radio"]:checked + label {
+    background:yellow;
+}
+
+.form-list label {
+     padding:5px;
+     border:1px solid #CCC;
+     cursor:pointer;
+    z-index:90;
+}
+
+.form-list label:hover {
+     background:#DDD;
 }

@@ -13,25 +13,36 @@
       <div class="intro-phrase">Your move.</div>
 
       <form>
-        <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn" required>Rock
-        <input type="radio" value="paper" ng-model="userChoice.choice" class="choice-btn paper-btn" required>Paper
-        <input type="radio" value="scissors" ng-model="userChoice.choice" class="choice-btn scissors-btn" required>Scissors
-        <br><!-- TODO: disable until select btn-->
-        <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" value="Go, Paper, Scissors, Go!">
+
+<div class="results" ng-show="results == true">
+
+          Your Choice: <span class="data">{{ data.playerChoice }}</span> <br>
+          Computer Choice: <span class="data">{{ data.computerChoice }}</span> <br>
+          Winner: <span class="data">{{ data.result }}</span>
+        </div>
+
+        <ul class="form-list">
+          <li>
+              <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn">
+              <label for="">Rock</label>
+          </li>
+          <li>
+              <input type="radio" value="paper" ng-model="userChoice.choice" class="choice-btn paper-btn">
+              <label for="">Paper</label>
+          </li>
+          <li>
+              <input type="radio" value="scissors" ng-model="userChoice.choice" class="choice-btn scissors-btn" required>
+              <label for="">Scissors</label>
+          </li>
+        </ul>
+        <div class="validate">
+            <input type="button" class="btn-success" ng-click="playGame(userChoice.choice)" value="Go, Paper, Scissors, Go!"><br>
+          You chose: {{userChoice.choice }}
+        </div>
       </form>
 
-      <div class="results" ng-show="results == true">
 
-
-        Your Choice: {{ data.playerChoice }} <br>
-        Computer Choice: {{ data.computerChoice }} <br>
-
-        Winner: {{ data.result }}
-      </div>
-
-      <br/>
-
-    </div>
+<!-- TODO: disable until select btn-->
 
     <!-- links to angular, angular ap and index.js -->
     <script src="bower_components/angular/angular.min.js"></script>
