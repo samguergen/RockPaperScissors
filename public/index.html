@@ -15,15 +15,16 @@
       </div>
 
       <form name="choiceForm">
-
+        <!-- ng show displays div only once backend call is completed -->
         <div class="results" ng-show="results == true">
           Your Choice: <span class="data">{{ data.playerChoice }}</span> <br>
           Computer Choice: <span class="data">{{ data.computerChoice }}</span> <br>
-          Winner: <span class="data">{{ data.result }}</span>
+          Winner: <span class="data">{{ data.result }}</span><br>
+          Your Total Score: <span class="data">{{ userScore }}</span>
         </div>
 
         <ul class="form-list">
-          <li>
+          <li><!-- radio buttons are hidden but concept stays the same -->
               <input type="radio" value="rock" ng-model="userChoice.choice" class="choice-btn rock-btn" required>
               <label for="">Rock</label>
           </li>
@@ -36,8 +37,10 @@
               <label for="">Scissors</label>
           </li>
         </ul>
+        <!-- button is disabled until user selects above choice -->
         <div class="validate">
             <input type="button" class="btn-success" ng-click="playGame()" ng-disabled="choiceForm.$invalid" value="Go, Paper, Scissors, Go!"><br>
+            <!-- new choice updates to DOM immediately via ng-model -->
           You chose: {{userChoice.choice }}
         </div>
 
