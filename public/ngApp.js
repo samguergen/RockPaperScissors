@@ -14,7 +14,7 @@ angular.module('myApp', [])
                   'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
               }
           };
-        var promise = $http.post('/match', postParam, config);
+        var promise = $http.post('/match', postParam);
 
         promise.then( function(response) {
           $scope.data = response;

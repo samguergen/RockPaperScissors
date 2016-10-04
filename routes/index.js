@@ -11,6 +11,7 @@ router.post("/match", function(req, res, next){
   setTimeout(function(){
     var status, body;
     var playerChoice = req.body.choice || "";
+    console.log('playerChoice is ', playerChoice);
     playerChoice = playerChoice.toLowerCase();
 
     if (!_.contains(['rock', 'paper', 'scissors'], playerChoice)) {
